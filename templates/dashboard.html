@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Dashboard</title>
+    <!-- Include Bootstrap CSS link here -->
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Welcome, Teacher {{ teacher_name }}</h2>
+        <ul class="list-group">
+            <li class="list-group-item"><a href="{{ url_for('add_student', teacher_id=teacher_id) }}" class="btn btn-primary">Add Student</a></li>
+            <li class="list-group-item"><a href="{{ url_for('update_student', teacher_id=teacher_id) }}" class="btn btn-success">Update Student</a></li>
+            <li class="list-group-item"><a href="{{ url_for('delete_student', teacher_id=teacher_id) }}" class="btn btn-danger">Delete Student</a></li>
+            <li class="list-group-item"><a href="{{ url_for('show_students', teacher_id=teacher_id) }}" class="btn btn-info">Show Students</a></li>
+        </ul>
+        <br>
+        <a href="/" class="btn btn-secondary">Logout</a>
+    </div>
+    <!-- Include Bootstrap JS script here -->
+</body>
+</html>
