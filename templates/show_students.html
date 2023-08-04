@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>Show Students</title>
-    <!-- Include Bootstrap CSS link here -->
+    <!-- Include Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container mt-5">
@@ -18,16 +19,19 @@
             <tbody>
                 {% for student in students %}
                     <tr>
+                        <td>{{ student[0] }}</td>
                         <td>{{ student[1] }}</td>
                         <td>{{ student[2] }}</td>
-                        <td>{{ student[3] }}</td>
                     </tr>
-                {% end-for %}
+                {% endfor %}
             </tbody>
         </table>
         <br>
         <a href="{{ url_for('dashboard', teacher_id=teacher_id) }}" class="btn btn-secondary">Back to Dashboard</a>
     </div>
-    <!-- Include Bootstrap JS script here -->
+    <!-- Include Bootstrap JS scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
