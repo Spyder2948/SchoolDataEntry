@@ -39,11 +39,6 @@ def send_confirmation_email(email):
 # Routes
 
 
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
@@ -97,7 +92,7 @@ def add_student(teacher_id):
 
         return redirect(url_for('dashboard', teacher_id=teacher_id))
 
-    return render_template('add_student.html')
+    return render_template('add_student.html', teacher_id=teacher_id)
 
 
 @app.route('/update_student/<int:teacher_id>', methods=['GET', 'POST'])
